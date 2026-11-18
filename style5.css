@@ -25,23 +25,6 @@ picture img {
     display: block;
 }
 
-@media (max-width:600px) {
-    picture {
-        width: 100%;
-    }
-
-    img {
-        height: clamp(12.5rem, 60vw, 17.5rem);
-    }
-
-    .card {
-        flex-direction: column;
-    }
-
-    .content {
-        width: 100%;
-    }
-}
 
 body {
     display: flex;
@@ -146,16 +129,30 @@ button:hover {
     background-color: var(--green700);
 }
 
+@media (max-width:37.5rem) {
+    picture {
+        width: 100%;
+    }
+
+    img {
+        height: clamp(12.5rem, 60vw, 17.5rem);
+    }
+
+    .card {
+        flex-direction: column;
+        width: min(90%, 22rem);
+    }
+
+    .content {
+        width: 100%;
+    }
+}
+
 .attribution {
     font-size: 0.6875rem;
     text-align: center;
-    margin-top: 0;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    right: 0;
-    font-size: 0.6875rem;
-    text-align: center;
+    margin-block-start: clamp(1rem, 3rem, 1.5rem);
+    padding-block-end: 1rem;
 }
 
 .attribution a {
